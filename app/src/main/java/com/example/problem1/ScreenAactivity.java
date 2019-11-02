@@ -3,14 +3,11 @@ package com.example.problem1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 
-public class MainActivity extends AppCompatActivity {
+public class ScreenAactivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +24,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToActivity (View view){
+        /* Page navigation*/
+        /*Event Handling from XML file*/
         EditText a =(EditText) findViewById(R.id.edittext);
-        Intent i = new Intent(MainActivity.this,ScreenbActivity.class);
+        Intent i = new Intent(ScreenAactivity.this,ScreenbActivity.class);
         i.putExtra("level", a.getText().toString());
         startActivity(i);
     }
